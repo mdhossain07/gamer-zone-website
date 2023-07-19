@@ -79,6 +79,16 @@ nav{
     padding: 50px 0;
 }
 
+.banner-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.banner-list > p{
+    padding-left: 10px;
+}
+
 .banner-column{
     width: 50%;
 }
@@ -102,10 +112,15 @@ nav{
     color: #534C64;
     font-size: 1.5rem;
     font-weight: 500;
+    text-align: center;
 }
 
 .banner-image > img{
     width: 100%;
+}
+
+.btn-box{
+    display: flex;
 }
 
 .btn-primary{
@@ -116,23 +131,23 @@ nav{
     border: none;
     font-size: 1.25rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .btn-secondary{
-    border-radius: 48px;
     background: #4EC5F7;
-    padding: 15px 35px;
-    color: white;
-    border: none;
-    font-size: 1.25rem;
-    font-weight: 600;
+}
+
+.banner-list p{
+    text-align: center;
 }
 
 @media screen and (max-width: 576px){
     section{
         width: 100%;
     }
-    .nav-container{
+    .nav-container,
+    .banner-container{
         flex-direction: column;
     }
 
@@ -144,6 +159,18 @@ nav{
     .menu ul li{
         padding: 10px 0;
     }
+
+    .banner-container{
+        flex-direction: column-reverse;
+    }
+
+    .banner-column{
+        width: 100%;
+    }
+
+    .banner-content{
+        text-align: center;
+    }
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -151,11 +178,16 @@ nav{
     section{
         width: 90%;
     }
-    .nav-container{
+    .nav-container,
+    .banner-container{
         flex-direction: column;
     } 
 
     .menu ul li{
         padding-top: 20px;
     }
+
+    .banner-container{
+        width: 100%;
+    } 
 }
